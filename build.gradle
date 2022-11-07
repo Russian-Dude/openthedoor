@@ -27,8 +27,13 @@ dependencies {
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
-springBoot {
-	mainClass = 'com.rdude.openthedoor.OpenthedoorApplication'
+
+bootJar {
+	archiveClassifier.set('boot')
+}
+
+jar {
+	archiveClassifier.set('')
 }
 
 tasks.named('test') {
